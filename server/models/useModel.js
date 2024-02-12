@@ -29,6 +29,24 @@ var userSchema = new mongoose.Schema(
       type: String,
       default: "user",
     },
+    isBlocked: {
+      type: Boolean,
+      default: false,
+    },
+    cart: {
+      type: Array,
+      default: [],
+    },
+    address: {
+      type: String,
+    },
+    wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
+    refreshToken: {
+      type: String,
+    },
+    passwordChangedAt: Date,
+    passwordResetToken: String,
+    passwordResetExpires: Date,
   },
   { timestamps: true }
 );
@@ -38,6 +56,15 @@ userSchema.pre("save", async function (next) {
 });
 userSchema.methods.isPasswordMatched = async function (ep) {
   return await bcrypt.compare(ep, this.password);
+};
+userSchema.methods.createPasswordResetToken = async function () {
+  const resettoken = crypto.randomBytes(32).toString("hex");
+  this.passwordResetToken = crypto
+    .createHash("sha256")
+    .update(resettoken)
+    .digest("hex");
+  this.passwordResetExpires = Date.now() + 30 * 60 * 1000; // 10 minutes
+  return resettoken;
 };
 //Export the model
 module.exports = mongoose.model("User", userSchema);
