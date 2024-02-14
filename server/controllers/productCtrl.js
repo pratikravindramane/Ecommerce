@@ -74,7 +74,7 @@ const getAll = asyncHandler(async (req, res) => {
       query = query.sort("-createdAt");
     }
 
-    // limiting the fields
+    // limiting the fields (only showing required data)
     if (req.query.fields) {
       const fields = req.query.fields.split(",").join(" ");
       query = query.select(fields);
