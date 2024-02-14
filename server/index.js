@@ -2,12 +2,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const authRoute = require("./routes/authRoute");
 const { notFound, errorHandler } = require("./middlewares/errorHandler");
+const morgan = require("morgan");
+const authRoute = require("./routes/authRoute");
 require("dotenv").config();
 
 const app = express();
 app.use(cors());
+app.use(morgan("dev"));
 app.use(express.json());
 app.use(cookieParser());
 const connect = () => {
@@ -19,8 +21,8 @@ const connect = () => {
   }
 };
 
-app.use("/", authRoute);
 app.use("/product", require("./routes/productRoute.js"));
+app.use("/", authRoute);
 
 app.use(notFound);
 app.use(errorHandler);

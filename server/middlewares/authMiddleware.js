@@ -8,7 +8,7 @@ const authMiddleware = asyncHandler(async (req, res, next) => {
     if (token) {
       const decode = jwt.verify(token, process.env.JWT);
       const user = await User.findById(decode.id);
-      res.user = user;
+      req.user = user;
       next();
     } else {
       throw new Error("No token found in the Headers");
