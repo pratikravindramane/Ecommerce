@@ -74,7 +74,7 @@ const getAll = asyncHandler(async (req, res) => {
       query = query.sort("-createdAt");
     }
 
-    // limiting the fields (only showing required data)
+    // limiting the fields (only showing required data) TOUNDERSTAND
     if (req.query.fields) {
       const fields = req.query.fields.split(",").join(" ");
       query = query.select(fields);
@@ -82,7 +82,7 @@ const getAll = asyncHandler(async (req, res) => {
       query = query.select("-__v");
     }
 
-    // pagination
+    // pagination TOUNDERSTAND
     const page = req.query.page;
     const limit = req.query.limit;
     const skip = (page - 1) * limit;

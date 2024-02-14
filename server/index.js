@@ -23,6 +23,13 @@ const connect = () => {
 
 app.use("/product", require("./routes/productRoute.js"));
 app.use("/", authRoute);
+app.use("/blog", require("./routes/blogRoute.js"));
+app.use("/category", require("./routes/productcategoryRoute.js"));
+app.use("/blogcategory", require("./routes/blogCatRoute.js"));
+app.use("/brand", require("./routes/brandRoute.js"));
+app.use("/coupon", require("./routes/couponRoute.js"));
+app.use("/color", require("./routes/colorRoute.js"));
+app.use("/enquiry", require("./routes/enqRoute.js"));
 
 app.use(notFound);
 app.use(errorHandler);
