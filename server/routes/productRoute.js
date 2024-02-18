@@ -6,12 +6,21 @@ const {
   rating,
   updateProduct,
   deleteProduct,
+  uploadImages,
 } = require("../controllers/productCtrl");
 const { authMiddleware } = require("../middlewares/authMiddleware");
 const { isAdmin } = require("../middlewares/authMiddleware");
+const { upload } = require("../middlewares/uploadMiddleware");
 
 const router = require("express").Router();
-
+router.put(
+  "/upload/:id",
+  authMiddleware,
+  isAdmin,
+  upload.array("images", 10),
+  // blogImgResize,
+  uploadImages
+);
 router.post("/", authMiddleware, isAdmin, createProduct);
 
 router.get("/:id", getaProdut);

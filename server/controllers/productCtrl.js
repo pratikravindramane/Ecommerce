@@ -4,6 +4,9 @@ const User = require("../models/useModel");
 const validateMongoDbId = require("../utils/validateMongodbId.js");
 const slugify = require("slugify");
 const { query } = require("express");
+const { cloudinaryUploadImg } = require("../utils/cloudinary.js");
+const fs = require("fs");
+
 const createProduct = asyncHandler(async (req, res) => {
   try {
     if (req.body.title) {
@@ -130,6 +133,7 @@ const addToWishlist = asyncHandler(async (req, res) => {
   }
 });
 
+// rating
 const rating = asyncHandler(async (req, res) => {
   const { _id } = req.user;
   const { prodId, star, comment } = req.body;
@@ -190,6 +194,39 @@ const rating = asyncHandler(async (req, res) => {
   }
 });
 
+// upload route
+const uploadImages = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  validateMongoDbId(id);
+  try {
+    const uploader = (path) => cloudinaryUploadImg(path, "images");
+    console.log("hello");
+    const urls = [];
+    const files = req.files;
+    for (const file of files) {
+      const { path } = file;
+      const newpath = await uploader(path);
+      console.log(newpath);
+      urls.push(newpath);
+      fs.unlinkSync(path);
+    }
+    const findProduct = await Product.findByIdAndUpdate(
+      id,
+      {
+        images: urls.map((file) => {
+          return file;
+        }),
+      },
+      {
+        new: true,
+      }
+    );
+    res.json(urls);
+  } catch (error) {
+    throw new Error(error);
+  }
+  console.log(req.files);
+});
 module.exports = {
   createProduct,
   getaProdut,
@@ -198,4 +235,5 @@ module.exports = {
   deleteProduct,
   addToWishlist,
   rating,
+  uploadImages,
 };

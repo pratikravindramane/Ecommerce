@@ -41,6 +41,7 @@ var productSchema = new mongoose.Schema(
     images: [
       {
         public_id: String,
+        asset_id: String,
         url: String,
       },
     ],
