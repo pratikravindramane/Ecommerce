@@ -1,7 +1,10 @@
+import { FaBeer } from "react-icons/fa";
 function App() {
   return (
     <div className="App">
-      <h1>ECommerce</h1>
+      <h3>
+        Lets go for a <FaBeer />?
+      </h3>
     </div>
   );
 }
