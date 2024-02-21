@@ -1,19 +1,19 @@
 import { FaBeer } from "react-icons/fa";
+import { Route, Routes, route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import "./app.css";
 function App() {
   return (
-    <div className="App">
-      <h3>
-        Lets go for a <FaBeer />?
-      </h3>
-      <div className="body">
-        <div className="navbar">NavBar</div>
-        <div className="hero">HeroSection</div>
-        <div className="about">AbouUs</div>
-        <div className="contact">ContactUs</div>
-        <div className="footer">Footer</div>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
+    </Routes>
   );
 }
-
 export default App;
