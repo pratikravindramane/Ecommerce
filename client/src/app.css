@@ -89,3 +89,10 @@ a {
   transform: translate3d(0px, 45px, 0) !important;
 }
 /* Header Ended */
+
+/* Footer */
+footer {
+  background-color: var(--color-232f3e);
+  border: 1px solid var(--color-3b4149);
+}
+/* Footer ended */
