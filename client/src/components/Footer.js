@@ -29,14 +29,29 @@ function Footer() {
           </div>
         </div>
       </footer>
-      <footer className="py-3">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <footer className="py-4">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-4">
+              <h5 className="text-white mb-4">Contact Us</h5>
+              <div></div>
+            </div>
+            <div className="col-3">
+              <h5 className="text-white mb-4">Information</h5>
+              <div></div>
+            </div>
+            <div className="col-3">
+              <h5 className="text-white mb-4">Account</h5>
+              <div></div>
+            </div>
+            <div className="col-2">
+              <h5 className="text-white mb-4">Quick Links</h5>
+              <div></div>
+            </div>
+          </div>
+        </div>
       </footer>
-      <footer className="py-3">
+      <footer className="py-4">
         <div className="container-xxl">
           <div className="row">
             <div className="col-12 ">
