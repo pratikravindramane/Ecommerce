@@ -9,6 +9,7 @@
   --color-febd69: #febd69;
   --color-232f3e: #232f3e;
   --color-bf4800: #bf4800;
+  --color-f5f5f7: #f5f5f7;
 }
 body {
   font-family: "Rubix", sans-serif;
@@ -118,6 +119,7 @@ footer .input-group-text {
 /* Footer ended */
 
 /* Home page */
+/* home wrapper 1 */
 .main-banner {
   position: relative;
 }
@@ -180,5 +182,13 @@ footer .input-group-text {
   letter-spacing: 0.4px;
   color: var(--color-131921);
 }
-
+/* home wrapper 1 ended */
+/* home wrapper 2 */
+.home-wrapper-2 {
+  background-color: var(--color-f5f5f7);
+}
+.home-wrapper-2 h6 {
+  font-weight: 600;
+}
+/* home wrapper 2 ended*/
 /* Home page ended */
