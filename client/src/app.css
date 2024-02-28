@@ -191,4 +191,14 @@ footer .input-group-text {
   font-weight: 600;
 }
 /* home wrapper 2 ended*/
+/* categories */
+.categories {
+  box-shadow: 0 0 10px #0000001a;
+  background-color: white;
+  padding: 15px;
+}
+.categories > div {
+  width: 24%;
+}
+/* categories ended */
 /* Home page ended */

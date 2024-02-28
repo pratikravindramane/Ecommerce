@@ -10,6 +10,10 @@ import service2 from "../images/service-02.png";
 import service3 from "../images/service-03.png";
 import service4 from "../images/service-04.png";
 import service5 from "../images/service-05.png";
+import camera from "../images/camera.jpg";
+import tv from "../images/tv.jpg";
+import watches from "../images/watch.jpg";
+import gaming from "../images/";
 function Home() {
   return (
     <>
@@ -126,6 +130,45 @@ function Home() {
                     <h6>Secure Payments</h6>
                     <p className="mb-0">100% Protected Payments</p>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="home-wrapper-2 py-5">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <div className="categories d-flex justify-content-between align-items-center">
+                <div className="d-flex align-items-center gap-30">
+                  <div>
+                    <h6>Music & Gaming</h6>
+                    <p>10 Items</p>
+                  </div>
+                  <img src={camera} alt="" />
+                </div>
+                <div className="d-flex align-items-center gap-30">
+                  <div>
+                    <h6>Smart TV</h6>
+                    <p>10 Items</p>
+                  </div>
+                  <img src={camera} alt="" />
+                </div>
+
+                <div className="d-flex align-items-center gap-30">
+                  <div>
+                    <h6>Smart TV</h6>
+                    <p>10 Items</p>
+                  </div>
+                  <img src={camera} alt="" />
+                </div>
+                <div className="d-flex align-items-center gap-30">
+                  <div>
+                    <h6>Smart Watches</h6>
+                    <p>10 Items</p>
+                  </div>
+                  <img src={camera} alt="" />
                 </div>
               </div>
             </div>
