@@ -18,11 +18,14 @@ import brand5 from "../images/brand-05.png";
 import brand6 from "../images/brand-06.png";
 import brand7 from "../images/brand-07.png";
 import brand8 from "../images/brand-08.png";
+import blog1 from "../images/blog-1.jpg";
 import camera from "../images/camera.jpg";
 import tv from "../images/tv.jpg";
 import watches from "../images/watch.jpg";
 import gaming from "../images/headphone.jpg";
 import Marquee from "react-fast-marquee";
+import BlogCard from "../components/BlogCard";
+import ProductCard from "../components/ProductCard";
 function Home() {
   return (
     <>
@@ -246,6 +249,37 @@ function Home() {
                 </Marquee>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="featured-wrapper py-5 home-wrapper-2">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <h3 className="section-heading">Featured Collection</h3>
+            </div>
+            <ProductCard
+              img={blog1}
+              title={"Pratik Mane"}
+              date={"1 April 2024"}
+              desc={"lorem ipsum"}
+            />
+            <ProductCard img={blog1} />
+            <ProductCard img={blog1} />
+            <ProductCard img={blog1} />
+          </div>
+        </div>
+      </section>
+      <section className="blog-wrapper py-5 home-wrapper-2">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <h3 className="section-heading">Our Latest Blogs</h3>
+            </div>
+            <BlogCard img={blog1} title={"Pratik Mane"} date={"1 April 2024"} />
+            <BlogCard img={blog1} title={"Pratik Mane"} date={"1 April 2024"} />
+            <BlogCard img={blog1} title={"Pratik Mane"} date={"1 April 2024"} />
+            <BlogCard img={blog1} title={"Pratik Mane"} date={"1 April 2024"} />
           </div>
         </div>
       </section>
