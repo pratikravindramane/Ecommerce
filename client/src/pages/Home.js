@@ -27,6 +27,10 @@ import Marquee from "react-fast-marquee";
 import BlogCard from "../components/BlogCard";
 import ProductCard from "../components/ProductCard";
 import SpecialProduct from "../components/SpecialProduct";
+import AppleWatch from "../images/subbanner-01.webp";
+import laptop from "../images/subbanner-02.webp";
+import phone from "../images/subbanner-03.webp";
+import speaker from "../images/subbanner-04.webp";
 function Home() {
   return (
     <>
@@ -271,6 +275,69 @@ function Home() {
           </div>
         </div>
       </section>
+      <section className="famous-wrapper py-5 home-wrapper-2">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-3">
+              <div className="famous-card position-relative">
+                <img
+                  src={AppleWatch}
+                  alt="watch"
+                  className="famous-img img-fluid"
+                />
+                <div className="famous-content position-absolute">
+                  <h5>Big Screen</h5>
+                  <h6>Smart Watch Series</h6>
+                  <p>From $399 or $16.62/mo. for 24mo.*</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="famous-card position-relative">
+                <img
+                  src={laptop}
+                  alt="watch"
+                  className="famous-img img-fluid"
+                />
+                <div className="famous-content position-absolute">
+                  <h5 className="text-dark">STUDIO DISPLAY</h5>
+                  <h6 className="text-dark">600 nits of brightness.</h6>
+                  <p className="text-dark">27-inch 5k Retina display</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="famous-card position-relative">
+                <img src={phone} alt="watch" className="famous-img img-fluid" />
+                <div className="famous-content position-absolute">
+                  <h5 className="text-dark">SMARTPHONES</h5>
+                  <h6 className="text-dark">Smartphoe 13Pro.</h6>
+                  <p className="text-dark">
+                    Now in Green. From $999.00 or $41.62/mo. for 24mo.
+                    Footnote.*
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="famous-card position-relative">
+                <img
+                  src={speaker}
+                  alt="watch"
+                  className="famous-img img-fluid"
+                />
+                <div className="famous-content position-absolute">
+                  <h5 className="text-dark">HOME SPEAKERS</h5>
+                  <h6 className="text-dark">Room-filling Sound</h6>
+                  <p className="text-dark">
+                    From $699 or $116.62/mo. for 12mo.*
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="special-wrapper py-5 home-wrapper-2">
         <div className="container-xxl">
           <div className="row">
@@ -282,6 +349,31 @@ function Home() {
             <SpecialProduct />
             <SpecialProduct />
             <SpecialProduct />
+          </div>
+        </div>
+      </section>
+      <section className="popular-wrapper py-5 home-wrapper-2">
+        <div className="container-xxl">
+          <div className="row">
+            <div className="col-12">
+              <h3 className="section-heading">Our Popular Products</h3>
+            </div>
+
+            <div className="row">
+              {/* <div className="col-2">
+                <div className="card"></div>
+              </div>
+              <div className="col-2"></div> */}
+              <ProductCard
+                img={blog1}
+                title={"Pratik Mane"}
+                date={"1 April 2024"}
+                desc={"lorem ipsum"}
+              />
+              <ProductCard img={blog1} />
+              <ProductCard img={blog1} />
+              <ProductCard img={blog1} />
+            </div>
           </div>
         </div>
       </section>

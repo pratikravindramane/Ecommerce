@@ -330,3 +330,38 @@ footer .input-group-text {
   border-radius: 10px;
 }
 /* special product ended */
+
+/* famous Product */
+.famous-img {
+  transition: 0.3s;
+  border-radius: 10px;
+}
+.famous-card {
+  transition: 0.2s;
+}
+.famous-card:hover {
+  transform: scale(0.97);
+}
+.famous-content {
+  top: 10%;
+  left: 10%;
+  color: white;
+}
+.famous-card h5 {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400px;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+.famous-content h6 {
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: 500px;
+}
+.famous-content p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 100;
+}
+/* famous Product ended */

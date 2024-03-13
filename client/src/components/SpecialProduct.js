@@ -12,7 +12,9 @@ const SpecialProduct = () => {
           </div>
           <div className="special-product-content">
             <h5 className="brand">Havels</h5>
-            <h6 className="title">Lorem ipsum dolor sit lorem.</h6>
+            <h6 className="title">
+              Samsung Galaxy Note10+ Mobile Phone; Sim...
+            </h6>
             <ReactStars
               count={5}
               // onChange={}
@@ -26,7 +28,7 @@ const SpecialProduct = () => {
             </p>
             <div className="discount-till d-flex align-items-center gap-10">
               <p className="mb-0">
-                <b>4 days</b>
+                <b>4 </b>days
               </p>
               <div className="d-flex gap-10 align-items-center">
                 <span className="badge rounded-circle p-3 bg-danger">1</span> :
