@@ -3,10 +3,13 @@ import { Helmet } from "react-helmet";
 
 const Meta = ({ data }) => {
   return (
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>{data}</title>
-    </Helmet>
+    <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{data}</title>
+      </Helmet>
+      <div></div>
+    </>
   );
 };
 
