@@ -31,9 +31,11 @@ import AppleWatch from "../images/subbanner-01.webp";
 import laptop from "../images/subbanner-02.webp";
 import phone from "../images/subbanner-03.webp";
 import speaker from "../images/subbanner-04.webp";
+import Meta from "../components/Meta";
 function Home() {
   return (
     <>
+      <Meta data={"Home"} />
       <section className="home-wrapper-1 py-5">
         <div className="container-xxl">
           <div className="row">
