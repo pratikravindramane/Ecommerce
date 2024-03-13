@@ -8,7 +8,6 @@ const Meta = ({ data }) => {
         <meta charSet="utf-8" />
         <title>{data}</title>
       </Helmet>
-      <div></div>
     </>
   );
 };
